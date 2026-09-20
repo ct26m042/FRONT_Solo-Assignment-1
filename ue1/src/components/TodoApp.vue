@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
-import type { Todo } from '../types/types';
+import type { Todo } from '../types';
 
 const todos = ref<Array<Todo>>([]);
 
