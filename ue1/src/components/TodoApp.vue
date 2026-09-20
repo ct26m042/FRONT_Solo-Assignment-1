@@ -1,15 +1,22 @@
-
-
 <script lang="ts" setup>
 import { ref } from 'vue';
+
 
 interface Todo {
     id: number;
     text: string;
-    completed: boolean;
+    done: boolean;
 }
 
-const todos = ref<Todo[]>([]);
+const todos = ref<Array<Todo>>([]);
+
+function addTodo(text: string): void {
+    todos.value.push({
+        id: todos.value.length + 1,
+        text: text,
+        done: false,
+    });
+}
 
 </script>
 

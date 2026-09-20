@@ -2,14 +2,14 @@
 import { ref } from 'vue';
 import { computed } from 'vue';
 
-const count = ref(0);
-const doubleCount = computed(() => count.value * 2);
+const count = ref<number>(0);
+const doubleCount = computed<number>(() => count.value * 2);
 
-function increment() {
+function increment(): void {
     count.value++;
 };
 
-function decrement() {
+function decrement(): void {
     if (count.value > 0) {
     count.value--;
     }
