@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Counter from './components/counter.vue';
+import Counter from './components/counter.vue'; // Working but not needed anymore
+import TodoApp from './components/TodoApp.vue';
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <Counter />
+  <TodoApp />
 </template>
 
 <style scoped></style>
