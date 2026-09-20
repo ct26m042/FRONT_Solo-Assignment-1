@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Todo } from '../types';
-
+import TodoItem from './TodoItem.vue';
 
 defineProps<{
     todos: Array<Todo>;
@@ -15,7 +15,8 @@ const emit = defineEmits<{
 
 <template>
     <div>
-        <h1>Todo List</h1>
-        <TodoItem v-for="todo in todos" :key="todo.id" :todo="todo" @toggleTodo="emit('toggleTodo', todo.id)" @deleteTodo="emit('deleteTodo', todo.id)" />
+        <ul>
+            <TodoItem v-for="todo in todos" :key="todo.id" :todo="todo" @toggleTodo="emit('toggleTodo', todo.id)" @deleteTodo="emit('deleteTodo', todo.id)" />
+        </ul>
     </div>
 </template>
