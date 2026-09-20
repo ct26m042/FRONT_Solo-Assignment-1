@@ -1,12 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
-
-
-interface Todo {
-    id: number;
-    text: string;
-    done: boolean;
-}
+import type { Todo } from '../types/types';
 
 const todos = ref<Array<Todo>>([]);
 
@@ -34,6 +28,6 @@ function deleteTodo(id: number): void {
 <template>
     <div>
         <h1>Todo App</h1>
-        
+
     </div>
 </template>
